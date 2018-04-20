@@ -12,6 +12,10 @@ class Age {
   inMercuryYears() {
     return parseFloat((this.userAge / .24).toFixed(2));
   }
+
+  inVenusYears() {
+    return parseFloat((this.userAge / .62).toFixed(2));
+  }
 }
 
 function getAge(date) {
