@@ -27,4 +27,8 @@ describe('Age', function() {
   it('should determine the users age in Mars years', function() {
     expect(userAge.inMarsYears()).toEqual(.53);
   })
+
+  it('should determine the users age in Jupiter years', function() {
+    expect(userAge.inJupiterYears()).toEqual(.084);
+  });
 });
