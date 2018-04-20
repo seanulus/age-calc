@@ -10,15 +10,15 @@ class Age {
   }
 
   inMercuryYears() {
-    return parseFloat((this.userAge / .24).toFixed(2));
+    return this.userAge * .24;
   }
 
   inVenusYears() {
-    return parseFloat((this.userAge / .62).toFixed(2));
+    return this.userAge * .62;
   }
 
   inMarsYears() {
-    return this.userAge * 1.88;
+    return parseFloat((this.userAge / 1.88).toFixed(2));
   }
 }
 
