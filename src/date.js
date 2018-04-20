@@ -1,8 +1,7 @@
-const userAge = getAge("2016/09/18");
-
 class Age {
-  constructor(userAge) {
+  constructor(userAge, expectancy) {
     this.userAge = userAge;
+    this.expectancy = expectancy;
   }
 
   ageInSeconds() {
@@ -10,11 +9,11 @@ class Age {
   }
 
   inMercuryYears() {
-    return this.userAge * .24;
+    return parseFloat((this.userAge / .24).toFixed(2));
   }
 
   inVenusYears() {
-    return this.userAge * .62;
+    return parseFloat((this.userAge / .62).toFixed(2));
   }
 
   inMarsYears() {
@@ -24,6 +23,14 @@ class Age {
   inJupiterYears() {
     return parseFloat((this.userAge / 11.86).toFixed(3));
   }
+
+  belowLifeExpectancy() {
+    if (this.userAge < this.expectancy) {
+      return this.expectancy - this.userAge;
+    }
+  }
+
+  aboveLifeExpectancy() {}
 }
 
 function getAge(date) {
@@ -37,8 +44,5 @@ function getAge(date) {
   return age;
 }
 
-
-
-console.log(userAge)
 
 export { Age, getAge };
