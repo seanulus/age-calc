@@ -9,7 +9,7 @@
 | Specification | Input | Output |
 * Should determine a user's age from a Date
     Input: 09/18/1987 Output: 30
-* Should detrmine a user's age in seconds
+* Should determine a user's age in seconds
     Input: 1 | Output: 31,536,000
 * Should determine a user's age in Mercury years
     Input: 30 | Output: 7.2
@@ -19,8 +19,6 @@
     Input: 30 | Output: 56.4
 * Should determine a user's age in Jupiter years
     Input: 30 | Output: 355.8
-* Should determine the difference in seconds between two dates
-    Input: 04/20/2017 & Current Date | Output: 86,400
 * Should determine the life expectancy of a user
     Input: 09/18/1987 | Output: 48 years (based on US life expectancy of 78 years)
 * Should return number of years past expectancy if already older
