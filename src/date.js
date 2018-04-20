@@ -16,6 +16,10 @@ class Age {
   inVenusYears() {
     return parseFloat((this.userAge / .62).toFixed(2));
   }
+
+  inMarsYears() {
+    return this.userAge * 1.88;
+  }
 }
 
 function getAge(date) {
