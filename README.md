@@ -1,6 +1,6 @@
 # **[Project Name]**
 
-#### By William Chu and Matt Dowdney
+#### By William Chu
 
 ## Description
 
@@ -12,8 +12,12 @@
 
 ## Setup/Installation Requirements
 
-* To view project code, _clone repository from_
-* To view project, _open in web browser_
+* To view project code, _clone repository from_ https://github.com/william-chu/Project
+* Install Node.js
+* Open terminal, navigate to project root folder and run npm install
+* To bundle and build project distribution folder, run npm run build
+* To view Jasmine tests, run npm test
+* To view project in development mode, run npm start
 
 ## Known Bugs
 
@@ -33,4 +37,4 @@
 
 * GPL
 
-William Chu and Matt Dowdney © 2018
+William Chu © 2018
