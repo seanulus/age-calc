@@ -40,6 +40,6 @@ describe('Age', function() {
   });
 
   it('should determine the life expectancy of the user', function() {
-    expect(userAge.belowLifeExpectancy(userAge.userAge, userAge.expectancy)).toEqual([0, 0, 0, 0, 0]);
+    expect(userAge.lifeExpectancy()).toEqual([321, 124, 77, 41, 6]);
   });
 });
