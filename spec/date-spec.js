@@ -19,7 +19,7 @@ describe('Age', function() {
     expect(userAge.ageInSeconds()).toEqual(31536000);
   });
 
-  it('should determine the elapsed time since the users birthday in seconds', function() {
+  it('should determine the users age based on a birthdate', function() {
     expect(getAge("1987/09/18")).toEqual(30);
   });
 
@@ -39,7 +39,7 @@ describe('Age', function() {
     expect(userAge.inJupiterYears()).toEqual(.084);
   });
 
-  // it('should determine the life expectancy of the user', function() {
-  //   expect(lifeExpectancy.inMercuryYears()).toEqual(18.72);
-  // });
+  it('should determine the life expectancy of the user', function() {
+    expect(userAge.belowLifeExpectancy(userAge.userAge, userAge.expectancy)).toEqual([0, 0, 0, 0, 0]);
+  });
 });

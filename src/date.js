@@ -24,10 +24,33 @@ class Age {
     return parseFloat((this.userAge / 11.86).toFixed(3));
   }
 
-  belowLifeExpectancy() {
-    if (this.userAge < this.expectancy) {
-      return this.expectancy - this.userAge;
+  belowLifeExpectancy(this.userAge, this.expectancy) {
+    let yearsArray = [4.17, 1.61, 1, .53, .084];
+    let userAgeArray = [];
+    let expectancyArray = [];
+    let totalArray = [];
+    if (this.userAge <= this.expectancy) {
+      for (var i = 0; i < yearsArray.length; i++) {
+        userAgeArray.push(Math.floor(yearsArray[i] * this.userAge));
+      }
+      for (var a = 0; a < yearsArray.length; a++) {
+        expectancyArray.push(yearsArray[a] * this.expectancy);
+      }
+      for (var b = 0; b < expectancyArray.length; b++) {
+        totalArray.push(expectancyArray[b] - userAgeArray[b]);
+      }
+    } else {
+      for (var c = 0; c < yearsArray.length; c++) {
+        userAgeArray.push(yearsArray[c] * this.userAge);
+      }
+      for (var d = 0; d < yearsArray.length; d++) {
+        expectancyArray.push(yearsArray[d] * this.expectancy);
+      }
+      for (var e = 0; e < userAgeArray.length; e++) {
+        totalArray.push(userAgeArray[e] - expectancyArray[e]);
+      }
     }
+    return totalArray;
   }
 
   aboveLifeExpectancy() {}
