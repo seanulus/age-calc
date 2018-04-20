@@ -20,6 +20,10 @@ class Age {
   inMarsYears() {
     return parseFloat((this.userAge / 1.88).toFixed(2));
   }
+
+  inJupiterYears() {
+    return parseFloat((this.userAge / 11.86).toFixed(3));
+  }
 }
 
 function getAge(date) {
