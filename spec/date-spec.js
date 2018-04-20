@@ -5,14 +5,18 @@ describe('Age', function() {
   let reusableDate
   let reusableAge;
   let userAge;
+  let userAge1;
   let lifeExpectancy;
+  let testAge;
 
   beforeEach(function() {
     nowDate = new Date();
     reusableDate = new Date("2017/04/20");
     reusableAge = getAge(reusableDate);
     lifeExpectancy = 78;
+    testAge = 88;
     userAge = new Age(reusableAge, lifeExpectancy);
+    userAge1 = new Age(testAge, lifeExpectancy);
   });
 
   it('should determine the users age in seconds', function() {
@@ -41,5 +45,9 @@ describe('Age', function() {
 
   it('should determine the life expectancy of the user', function() {
     expect(userAge.lifeExpectancy()).toEqual([321, 124, 77, 41, 6]);
+  });
+
+  it('should determine how many years over the life expectancy', function() {
+    expect(userAge1.lifeExpectancy()).toEqual([41, 16, 10, 5, 1]);
   });
 });
