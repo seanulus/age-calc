@@ -2,20 +2,25 @@ import { Age, getAge } from "./../src/date.js";
 
 describe('Age', function() {
   let nowDate;
+  let reusableDate
   let reusableAge;
   let userAge;
   let lifeExpectancy;
 
   beforeEach(function() {
     nowDate = new Date();
-    reusableAge = getAge("2016/09/18");
+    reusableDate = new Date("2017/04/20");
+    reusableAge = getAge(reusableDate);
     lifeExpectancy = 78;
     userAge = new Age(reusableAge, lifeExpectancy);
-    // new Date("2016/09/18");
   });
 
   it('should determine the users age in seconds', function() {
     expect(userAge.ageInSeconds()).toEqual(31536000);
+  });
+
+  it('should determine the elapsed time since the users birthday in seconds', function() {
+    expect(getAge("1987/09/18")).toEqual(30);
   });
 
   it('should determine the users age in Mercury years', function() {
@@ -34,7 +39,7 @@ describe('Age', function() {
     expect(userAge.inJupiterYears()).toEqual(.084);
   });
 
-  it('should determine the life expectancy of the user', function() {
-    expect(lifeExpectancy.inMercuryYears()).toEqual(18.72);
-  });
+  // it('should determine the life expectancy of the user', function() {
+  //   expect(lifeExpectancy.inMercuryYears()).toEqual(18.72);
+  // });
 });
