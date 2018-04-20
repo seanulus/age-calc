@@ -21,6 +21,10 @@ describe('Age', function() {
   });
 
   it('should determine the users age in Venus years', function() {
-    expect(userAge.inVenusYears()).toEqual(1.61)
+    expect(userAge.inVenusYears()).toEqual(1.61);
   });
+
+  it('should determine the users age in Mars years', function() {
+    expect(userAge.inMarsYears()).toEqual(1.88);
+  })
 });
