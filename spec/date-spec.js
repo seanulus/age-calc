@@ -15,4 +15,8 @@ describe('Age', function() {
   it('should determine the users age in seconds', function() {
     expect(userAge.ageInSeconds()).toEqual(31536000);
   });
+
+  it('should determine the users age in Mercury years', function() {
+    expect(userAge.inMercuryYears()).toEqual(4.17);
+  });
 });

@@ -8,6 +8,10 @@ class Age {
   ageInSeconds() {
     return this.userAge * (((365 * 24) * 60) * 60);
   }
+
+  inMercuryYears() {
+    return parseFloat((this.userAge / .24).toFixed(2));
+  }
 }
 
 function getAge(date) {
