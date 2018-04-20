@@ -1,10 +1,12 @@
+const userAge = getAge("2016/09/18");
+
 class Age {
-  constructor(getAge) {
-    this.age = getAge();
+  constructor(userAge) {
+    this.userAge = userAge;
   }
 
   ageInSeconds() {
-    // this.prop = value;
+    return this.userAge * (((365 * 24) * 60) * 60);
   }
 }
 
@@ -21,6 +23,6 @@ function getAge(date) {
 
 
 
-console.log("age in seconds: " + (getAge("2016/09/18"))*(((365 * 24) * 60) * 60))
+console.log(userAge)
 
 export { Age, getAge };

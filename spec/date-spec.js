@@ -2,15 +2,17 @@ import { Age, getAge } from "./../src/date.js";
 
 describe('Age', function() {
   let nowDate;
-  let userDate;
+  let reusableAge;
   let userAge;
+
   beforeEach(function() {
     nowDate = new Date();
-    userDate = new Date("1987/09/18");
-    userAge = new Age();
+    reusableAge = 1;
+    userAge = new Age(reusableAge);
+    // new Date("2016/09/18");
   });
 
   it('should determine the users age in seconds', function() {
-    expect(userAge.age * (((365 * 24) * 60) * 60)).toEqual();
+    expect(userAge.ageInSeconds()).toEqual(31536000);
   });
 });
